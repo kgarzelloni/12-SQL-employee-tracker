@@ -22,7 +22,7 @@ function inquirerPrompts() {
       {
         type: "list",
         name: "option",
-        message: "What do you want to do?",
+        message: "What would you like to do?",
         choices: [
           "View all employees",
           "Add an employee",
@@ -40,11 +40,12 @@ function inquirerPrompts() {
 }
 
 // function for view employees
-const getEmployees = `SELECT id, first_name, last_name FROM employee`;
+// const getEmployees = `SELECT id, first_name, last_name FROM employee`;
   
-db.query('SELECT id, frist_name, last_name FROM employee', function (err, results) {
-  console.table(results);
-});
+// db.query('SELECT id, first_name, last_name FROM employee', function (err, results) {
+//   if(err)console.log(err)
+//   console.log(results);
+// });
 
 // function for add employees
 
