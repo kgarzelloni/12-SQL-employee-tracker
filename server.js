@@ -1,18 +1,18 @@
 const inquirer = require("inquirer");
-const mysql = require('mysql2');
+const mysql = require("mysql2");
 const db = require("./db/sqlconnection");
 
 // required for logo rendering
 const logo = require("asciiart-logo");
 const config = require("./package.json");
-const { listenerCount } = require("process");
+
 
 // initial function that runs everything to start the app
 
 function init() {
   console.log("the application is running");
   console.log(logo(config).render());
-  inquirerPrompts ();
+  inquirerPrompts();
 }
 init();
 // function for prompts
@@ -21,10 +21,17 @@ function inquirerPrompts() {
     .prompt([
       {
         type: "list",
-        name: "first_list",
+        name: "option",
         message: "What do you want to do?",
-        choices: [{ name: "View all employees", value: "" },{ name: "Add an employee", value: "" },{ name: "Update an Employee Role", value: "" },
-        { name: "View all roles", value: "" },{ name: "Add a role", value: "" },{ name: "View all departments", value: "" },{ name: "Add a department", value: "" }],
+        choices: [
+          "View all employees",
+          "Add an employee",
+          "Update an Employee Role",
+          "View all roles",
+          "Add a role",
+          "View all departments",
+          "Add a department",
+        ],
       },
     ])
     .then((res) => {
@@ -33,20 +40,20 @@ function inquirerPrompts() {
 }
 
 // function for view employees
-
+const getEmployees = `SELECT id, first_name, last_name FROM employee`;
+  
+db.query('SELECT id, frist_name, last_name FROM employee', function (err, results) {
+  console.table(results);
+});
 
 // function for add employees
 
-
 // function for view roles
 
+// function for updating employee role
 
 // function for add roles
 
-
 // function for view departments
 
-
 // function for add departments
-
-
