@@ -40,21 +40,30 @@ function inquirerPrompts() {
 }
 
 // function for view employees
-// const getEmployees = `SELECT id, first_name, last_name FROM employee`;
   
-// db.query('SELECT id, first_name, last_name FROM employee', function (err, results) {
-//   if(err)console.log(err)
-//   console.log(results);
-// });
+db.query('SELECT * FROM employee_tracker_db.employee', function (err, results) {
+  if(err)console.log(err)
+  console.table(results);
+});
 
 // function for add employees
 
 // function for view roles
+
+db.query('SELECT * FROM employee_tracker_db.role', function (err, results) {
+  if(err)console.log(err)
+  console.table(results);
+});
 
 // function for updating employee role
 
 // function for add roles
 
 // function for view departments
+
+db.query('SELECT * FROM employee_tracker_db.department', function (err, results) {
+  if(err)console.log(err)
+  console.table(results);
+});
 
 // function for add departments
