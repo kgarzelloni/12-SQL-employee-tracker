@@ -77,7 +77,7 @@ addEmployeePrompt = inquirer.prompt([
 
 ])
 .then((answers) => {
-  // Use answers for updating employee table
+  // Use answers for updating employee table, possible solution- switch/case statments to sort through functions depending on user choice
 })
 .catch((error) => {
   if (error) {
@@ -163,4 +163,6 @@ addDepartmentPrompt = inquirer.prompt([
     }
   });
   initialPrompts();
+
+
 
