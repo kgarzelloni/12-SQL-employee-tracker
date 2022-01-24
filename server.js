@@ -71,6 +71,7 @@ function viewEmployees() {
     "SELECT * FROM employee_tracker_db.employee",
     function (err, results) {
       if (err) console.log(err);
+      console.log ("viewing all Emplployees")
       console.table(results);
     }
   );
@@ -117,7 +118,9 @@ function addEmployee() {
     .then(() => initialPrompts())
     .catch((error) => {
       if (error) {
+        console.log("an error occured");
       } else {
+        console.log("success");
       }
     });
 }
@@ -126,6 +129,7 @@ function addEmployee() {
 function viewRoles() {
   db.query("SELECT * FROM employee_tracker_db.role", function (err, results) {
     if (err) console.log(err);
+    console.log("Viewing all Roles")
     console.table(results);
   });
   initialPrompts();
@@ -161,7 +165,9 @@ function addRole() {
     .then(() => initialPrompts())
     .catch((error) => {
       if (error) {
+        console.log("an error occured");
       } else {
+        console.log("success");
       }
     });
 }
@@ -212,6 +218,7 @@ function viewDepartments() {
     "SELECT * FROM employee_tracker_db.department",
     function (err, results) {
       if (err) console.log(err);
+      console.log("Viewing All Departments")
       console.table(results);
     }
   );
@@ -245,7 +252,7 @@ function addDepartment() {
       if (error) {
         console.log("an error occured");
       } else {
-        console.log("that was successful, feels good doesn't it?");
+        console.log("success");
       }
     });
 }
