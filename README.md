@@ -21,8 +21,7 @@ You’ll need to use the [MySQL2 package](https://www.npmjs.com/package/mysql2) 
 The following link show an image of initiziation of the application in the command line:
 ![a screen shot of the command-line employee management application](./Assets/screen-shot-employee-tracker.png)
 
-The following video shows an example of the application being used from the command line: (item pending completion)
-![video demo of application](https://watch.screencastify.com/v/5RVcp72jfgbIuDQXMfRV)
+The following video shows an example of the application being used from the command line: https://watch.screencastify.com/v/5RVcp72jfgbIuDQXMfRV
 
 ## GitHub Repository 
 
